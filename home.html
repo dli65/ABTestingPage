@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="index.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+
+  <body>
+    <!-- TODO: put your HTML code here! -->
+    <!--NavBar-->
+    <div class = "topnav">
+      <a class = "home">home</a>
+      <div class = "otherlinks">
+        <a class = "work">work</a>
+        <a class = "about">about</a>
+        <a class = "resume">resume</a>
+      </div>
+    </div>
+
+    <!--Main Part-->
+    <div class="main">
+      <div class = "content">
+        <img class = "headerimg" src="WebPage Images/Untitled_Artwork 17.png"/>
+        <div class = "title">
+            <h1>cact-I + cact-you = cact-us</h1>
+            <h3>A/B Testing</h3>
+        </div>
+        <div class = "textsect">
+          <h4>Introduction</h4>
+          <p>How do designers decide between two or more versions of the same design? The answer lies in A/B Testing. In this project, I will use A/B Testing and Statistical Testing methods to gauge the difference between two iterations of the same website. <br>
+            Click <a href="https://limitless-hollows-15126.herokuapp.com/">here</a> to access the webpages.</p>
+        </div>
+        <div class="textsect">
+          <h4>The Webpages</h4>
+          
+            <div class = "row">
+              <div style="align-self: flex-start;" class = "webImg">
+                <h3>Webpage A</h3>
+              <img src="WebPage Images/B 1.png" >
+              </div>
+              <div class = "webImg">
+                <h3>Webpage B</h3>
+              <img src = "WebPage Images/A 1.png" >
+              </div>
+            </div>
+            <p>For this project, I designed two versions of a shopping page for a cacti shop. 
+              <br><br>In Version A, the product cards, or divs, are larger, taking up two per row. there is also greater distance between them. The product information is displayed in a vertical orientation, with the price, description, ‘Add to Cart’ button, and cart count taking up one line each. Finally, the Cart button is aligned with the left edge of the product cards container.
+              <br><br>In Version B, the product containers are smaller, and the ‘Add to Cart’ button is on the same line as the cart count. The price is also added to the end of the description. The Cart button is also more flushed against the left margin.<br><br>
+         <br></p>
+            </div>
+          
+
+          <div class="textsect">
+            <h4>Tests</h4>
+            <h3 class = "greytitle" style = "font-variant: small-caps;">The Task:</h3>
+            <p style="align-self: center;">Add over $150 of cacti to your cart and check out.
+            </p>
+            <h4 style="color: black; font-weight:400; font-variant: small-caps;">Test 1: Time to Completion</h4><br>
+            <p>For the first test, I wanted to measure how long it takes users to complete the test on each website, and determine if there is a significant difference between the two. In this case, because I would be measuring the average time spent on the sites by each user, I used a T-Test.
+            </p>
+            
+            <h3 class = "greytitle" style= " color: #99A494; padding-left: 5%; margin-top: 0%;">Null Hypothesis</h3>
+            <p style="align-self: center;">Between Webpage A and Webpage B, there is no significant difference in the time taken to complete the task.</p>
+            <h3 class = "greytitle" style= " color: #99A494; margin-top: 0%; padding-left: 5%;">Alternative Hypothesis</h3>
+            <p style="align-self: center;">Between Webpage A and Webpage B, there is a significant difference in the time taken to complete the task.</p>
+            <br>
+            <h4 style="color: black; font-weight:400; font-variant: small-caps;">Test 2: Return Rate</h4>
+            <p>For the second test, I wanted to measure how many returns to the shop page the user makes from the Check Out page, and see if there is a significant difference between the return rates of the two sites. Because I would be recording the categories of users into did return and did not return, I used a chi-squared test.            </p>
+            <h3 class = "greytitle" style= " color: #99A494; padding-left: 5%;; margin-top: 0%;">Null Hypothesis</h3>
+            <p style="align-self: center;">Between Webpage A and Webpage B, there is no significant difference in the number of returns to a page to complete the task.</p>
+            <h3 class = "greytitle" style= " color: #99A494; margin-top: 0%; padding-left: 5%;">Alternative Hypothesis</h3>
+            <p style="align-self: center;">Between Webpage A and Webpage B, there is a significant difference in the number of returns to a page to complete the task.</p>
+          </div>
+          <br>
+
+          <div class="textsect">
+            <h4>Collecting the Data</h4>
+            <p>To collect the data, I set up an app on Heroku that, upon launching, would randomly load either webpage A or webpage B. Then, my classmates went onto the app, either landing on page A or B, and completed the task. They would first add cacti to the cart, and then proceed to the check out page. </p>
+            <p>To analyze the data, I pulled from Heroku a log of all the activity that occured on the App. The log displayed the timestamp of each event, which version the event occured on, and the user that completed the event. By hand, I went through the log, pulling out the duration that each user spent on the site, as well as whether they did any returns to the initial page after going to the Check out page or not. This data was categorized either under page A, or page B.
+            </p>
+          </div>
+          <div class="textsect">
+            <h4>Data Analysis Insights / Infographic</h4>
+            <img src="WebPage Images/Infographic.jpg" style = "align-self: center;" class = "info">
+          </div><br>
+
+          <div class="textsect">
+            <h4>Takeaways</h4>
+            <p>The limitations I faced in AB Testing:<br>
+              -  Not many users to gain feedback from; only around 23 users<br>
+              -  Number of users I had between Webpage A and B was skewed: 15 for A, and only 8 for B</p>
+            <p>Takeaways on Design Principles:<br>
+              -  Size does not have as much as an impact as layout does in a website<br>
+              -  As long as a button is clearly made as a Call-to-Action, the user will search for it regardless of layout and hierarchy.</p><br><br>
+          </div>
+          <br>
+          <br>
+          <br>
+
+      </div>
+    </div>
+  </body>
+</html>
